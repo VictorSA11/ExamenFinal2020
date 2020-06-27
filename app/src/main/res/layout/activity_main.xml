@@ -35,4 +35,14 @@
         tools:layout_editor_absoluteY="626dp" />
 
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:entries="@array/modo" />
+
+    <FrameLayout
+        android:id="@+id/fragmento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

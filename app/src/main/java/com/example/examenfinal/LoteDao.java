@@ -11,13 +11,13 @@ import java.util.List;
 
 public interface LoteDao {
 
-    @Query("SELECT * from lote_table ORDER BY lote ASC")
+    @Query("SELECT * from Lote_table ORDER BY lote ASC")
     LiveData<List<Lote>> getAlphabetizedWords();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Lote lote);
 
-    @Query("DELETE FROM lote_table")
+    @Query("DELETE FROM Lote_table")
     void deleteAll();
     @Delete
     void delete(Lote lote);

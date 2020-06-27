@@ -2,10 +2,14 @@ package com.example.examenfinal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
-
+    Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

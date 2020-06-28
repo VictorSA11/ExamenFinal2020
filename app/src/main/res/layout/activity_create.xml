@@ -8,18 +8,50 @@
     tools:context=".Juan.CreateActivity">
 
     <TextView
-        android:textStyle="italic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Creacion de Potreros"
-        android:textAlignment="center"
         android:gravity="center_horizontal"
-        android:textSize="30dp"/>
+        android:text="Nuevo Lote"
+        android:textAlignment="center"
+        android:textSize="24sp"
+         />
 
     <LinearLayout
-        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btnCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="fecha" />
+
+
+        <Button
+            android:id="@+id/btnCamara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="foto" />
+
+
+        <Button
+            android:id="@+id/btnVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="video" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -27,36 +59,59 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:text="Nombre del Potrero" />
-
             <EditText
-                android:id="@+id/txt_PotreroName"
+                android:id="@+id/edit_nombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="7"/>
+                android:layout_height="match_parent"
+                android:autofillHints=""
+                android:fontFamily="sans-serif-light"
+                android:inputType="textAutoComplete"
+                android:text="Nombre del lote"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="374dp" />
+
+
         </LinearLayout>
 
         <LinearLayout
-
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:text="Fecha de Creacion"/>
+                android:id="@+id/fechaTxt"
+                android:layout_width="407dp"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:text="Fecha"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="326dp" />
 
-            <EditText
-                android:id="@+id/txt_Date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="7"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="392dp"
+                android:layout_height="139dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@android:color/background_light"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="48dp" />
+
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,95 +119,49 @@
             android:layout_marginTop="50dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="85dp"
-                android:layout_height="match_parent"
-                android:text="Area en m2:"/>
-
             <EditText
-                android:id="@+id/txt_Area"
+                android:id="@+id/edit_medida"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="7"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:text="Foto" />
-
-            <ImageView
-                android:id="@+id/Imagen"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginRight="5dp"/>
-
-            <EditText
-                android:id="@+id/namePhoto"
-                android:layout_width="155dp"
-                android:layout_height="32dp"/>
-
-            <Button
-                android:id="@+id/btnTakePhoto"
-                android:layout_width="wrap_content"
-                android:layout_height="42dp"
-                android:layout_marginLeft="3dp"
-                android:text="Agregar" />
+                android:autofillHints=""
+                android:fontFamily="sans-serif-light"
+                android:inputType="textAutoComplete"
+                android:text="Metros Cuadrados"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="431dp" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginTop="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewVideo"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:text="Video " />
+            android:layout_height="155dp">
 
             <ImageView
-                android:id="@+id/video"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginRight="5dp"
-                android:visibility="visible" />
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:adjustViewBounds="true"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="476dp">
 
-            <EditText
-                android:id="@+id/editTextVideo"
-                android:layout_width="155dp"
-                android:layout_height="wrap_content"/>
-
-
-            <Button
-                android:id="@+id/buttonVideo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="tomarVideo"
-                android:text="Agregar" />
-
+            </ImageView>
         </LinearLayout>
 
 
         <Button
             android:id="@+id/button_save"
-            android:layout_width="380dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/holo_purple"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
             android:onClick="savePotrero"
             android:text="Guardar"
-            android:gravity="center"
             android:textColor="@color/cardview_light_background" />
 
     </LinearLayout>

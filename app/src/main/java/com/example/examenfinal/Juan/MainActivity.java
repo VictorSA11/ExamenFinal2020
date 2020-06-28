@@ -1,14 +1,11 @@
-package com.example.examenfinal;
+package com.example.examenfinal.Juan;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
-import com.example.examenfinal.Juan.AppDatabase;
-import com.example.examenfinal.Juan.Constante;
-import com.example.examenfinal.Juan.CreateActivity;
-import com.example.examenfinal.Juan.DesplegarLotes;
+import com.example.examenfinal.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;

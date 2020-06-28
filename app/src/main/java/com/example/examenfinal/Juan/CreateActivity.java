@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.examenfinal.MainActivity;
 import com.example.examenfinal.R;
 
 public class CreateActivity extends AppCompatActivity {

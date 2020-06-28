@@ -19,11 +19,10 @@ public class CreateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
-        nombre = (EditText)findViewById(R.id.txt_PotreroName);
+        nombre = (EditText)findViewById(R.id.edit_nombre);
         fecha = (EditText)findViewById(R.id.txt_Date);
-        area = (EditText)findViewById(R.id.txt_Area);
-        img = (EditText)findViewById(R.id.namePhoto);
-        video = (EditText)findViewById(R.id.editTextVideo);
+        area = (EditText)findViewById(R.id.edit_medida);
+
 
         db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, Constante.BD_NAME).allowMainThreadQueries().build();
 

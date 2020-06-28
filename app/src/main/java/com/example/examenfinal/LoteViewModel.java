@@ -26,7 +26,7 @@ public class LoteViewModel extends AndroidViewModel {
     void update(Lote lote) {
         mRepository.update(lote);
     }
-   // void delete(Lote lote) {
-    //    mRepository.delete(lote);
-   // }
+   void delete(Lote lote) {
+       mRepository.delete(lote);
+    }
 }

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ExamenFinal</string>
+    <string name="Titulo">Rotacion de los lotes</string>
+    <string name="nombres">Victor Segura y Juan Araica</string>
+    <string name="TextRotacion">Rotacion de Ganado</string>
+    <string name="menu_home">Bienbenidos a su menu</string>
+    <string name="nav_header_desc">10px</string>
 </resources>

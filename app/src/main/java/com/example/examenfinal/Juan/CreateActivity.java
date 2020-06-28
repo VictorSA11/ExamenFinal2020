@@ -13,7 +13,7 @@ import com.example.examenfinal.R;
 
 public class CreateActivity extends AppCompatActivity {
 
-    EditText nombre, fecha, area, img, video;
+    EditText nombre, fecha, area;
     AppDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,7 @@ public class CreateActivity extends AppCompatActivity {
         obj.setNombre(nombre.getText().toString());
         obj.setFecha(fecha.getText().toString());
         obj.setArea(area.getText().toString());
-        obj.setImg(img.getText().toString());
-        obj.setVideo(video.getText().toString());
+
 
         long resul = db.potreroDao().insert(obj);
         if (resul > 0 ){
